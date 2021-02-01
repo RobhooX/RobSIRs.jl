@@ -66,5 +66,7 @@ Hierarchical ABM :: Julia Agents.jl or EvoDynamics.jl :
 ![plot](preliminarycartoon.png)
 
 A. Infection waves as a function of connectivity under a virulence-dispersion trade-off. Infection waves are low at low connectivity. At high connectivity waves growth linearly?
+
 B. Dispersal-virulence traded-off. Vertical lines show high virulence low dispersal while horizontal line virulence is independent of dispersal.
+
 C. Death rate is low for age-class X with no trade-offs for the whole connectivity gradient, while it is high when trade-offs are incuded (red)
