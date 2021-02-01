@@ -62,5 +62,6 @@ Hierarchical ABM :: Julia Agents.jl or EvoDynamics.jl :
 
 
 ## Preliminary discussions (RUN SIMUS)
+%https://stackoverflow.com/questions/14494747/how-to-add-images-to-readme-md-on-github
 ![plot](preliminarycartoon.png)
 
