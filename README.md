@@ -1,10 +1,10 @@
 # RobSIRs
 
-A stochastic discrete spatiotemporal model of contact-networks.
+A stochastic discrete spatiotemporal model of eco-evolutionary feedbacks in contact-networks.
 
 ## VISION
 
-Modeling mobility dynamics and age-dependent mortality rate at local regional and global scales (NODE: individual, city, and country). Inference includes Susceptibles (S), Infected (I), R (Recovered) and D (Death) types per NODE from dynamic connectivity (C), human density (S), infected (I) and deaths (D) for isolated, fully connected, Connectivity dynamics and empirical mobility rate estimations. 
+Modeling mobility dynamics and age-dependent mortality rate at local regional and global scales (NODE: individual, city, and country). Inference includes Susceptibles (S), Infected (I), Recovered (R) and Deaths (D) types per NODE for four different connectivity scenarios: isolated, fully connected, connectivity dynamics and empirical mobility estimations. 
 
 ## QUESTION
 
@@ -65,3 +65,6 @@ Hierarchical ABM :: Julia Agents.jl or EvoDynamics.jl :
 %https://stackoverflow.com/questions/14494747/how-to-add-images-to-readme-md-on-github
 ![plot](preliminarycartoon.png)
 
+A. Infection waves as a function of connectivity under a virulence-dispersion trade-off. Infection waves are low at low connectivity. At high connectivity waves growth linearly?
+B. Dispersal-virulence traded-off. Vertical lines show high virulence low dispersal while horizontal line virulence is independent of dispersal.
+C. Death rate is low for age-class X with no trade-offs for the whole connectivity gradient, while it is high when trade-offs are incuded (red)
