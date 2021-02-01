@@ -62,3 +62,5 @@ Hierarchical ABM :: Julia Agents.jl or EvoDynamics.jl :
 
 
 ## Preliminary discussions (RUN SIMUS)
+![plot](preliminarycartoon.png)
+
