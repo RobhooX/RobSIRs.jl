@@ -1,11 +1,40 @@
 # RobSIRs
 
-A stochastic discrete time model of disease spread in spatial networks.
+A stochastic discrete spatiotemporal model of contact-networks.
 
 ## VISION
 
-Modeling mobility dynamics (NODE: country or city level) at the global scale
-to infer S, I, R and D types per NODE from Global Density (S), Infected (I) and Deaths (D) for Isolated, Fully connected, and Empirical mobility rate estimations. 
+Modeling mobility dynamics and age-dependent mortality rate at local regional and global scales (NODE: individual, city, and country). Inference includes Susceptibles (S), Infected (I), R (Recovered) and D (Death) types per NODE from dynamic connectivity (C), human density (S), infected (I) and deaths (D) for isolated, fully connected, Connectivity dynamics and empirical mobility rate estimations. 
+
+## QUESTION
+
+How do virulence-dispersion trade-offs along a gradient of connectivity dynamics change the number of infection waves and mortality rates?
+
+## MODELING STRATEGY
+
+eSIRevo: Eco-evo dynamics (trade-offs virulence-dispersion rate plus connectivity rate): 4 parameters Random number --> mutation and virulence rates gradient along dispersal rate --> Proxy as recovery rate --> virulence by matching
+
+## MODELING STRUCTURE
+
+Hierarchical ABM :: Julia Agents.jl or EvoDynamics.jl :
+
+    https://github.com/JuliaDynamics/Agents.jl
+
+    https://github.com/kavir1698/EvoDynamics.jl
+
+    Bayesian Scientist:: Machine scientist -- code in python at https://bitbucket.org/rguimera/machine-scientist
+
+    Keywords:
+    
+    SIR :: Agent-based, single trait, spatially explicit, evolving interaction trait: virus much higher than humans, age-structured,
+
+    Time-dependent state variables: interaction trait (matching process), susceptibles, infected, recovered
+
+## PRELIMINARY TITLES
+
+    Eco-evolutionary spatial dynamics of contact networks: Covid-19 as a case study.
+    Eco-evo dynamics of hot- and cold- urban spots in the human-Covid-19 interaction
+
 
 ## SIR equations per NODE
 
@@ -19,7 +48,10 @@ to infer S, I, R and D types per NODE from Global Density (S), Infected (I) and 
 
 * b: susceptible to infectious transmission rate  
 * c: susceptible to infectious contact rate
-* m: migration to/from j rate
+* m: migration rate to/from site j 
+* r: radius connecting sites i and j : sinusoidal function depending with radius, r, depending on Frequency (f) and Amplitude (w).
+* v: virulence rate
+* mu: mutation rate (how many mutations to produce a new variant?)
 * s: recovered to susceptible rate
 * a: infected to recovered rate
 * d: death rate (ds, dI, dr)
@@ -27,3 +59,6 @@ to infer S, I, R and D types per NODE from Global Density (S), Infected (I) and 
 ## Generalization of the equations for an automated simulator builder 
 
 * Process-based knowledge graph to explore populations of models. For example, the SIR equations per NODE described above can be generalized to have Sn nodes for susceptibles (i.e., age classes), In nodes for infected, and Rn nodes for recoverd. In addition, there might be other node types, like explosed, unreported and reported infectious and hospitalized.
+
+
+## Preliminary discussions (RUN SIMUS)
