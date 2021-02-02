@@ -4,7 +4,7 @@ A stochastic discrete spatiotemporal model of eco-evolutionary feedbacks in cont
 
 ## VISION
 
-Covid-19 pandemic as a model system to explore eco-evolutionary feedbacks. This is to say how ecological dynamics driven by connectivity dynamics (i.e. lockdowns) interact with new variants. The specific goal is to modeling mobility dynamics and age-dependent mortality rate at local regional and global scales (NODE: individual, city, and country). Inference includes Susceptibles (S), Infected (I), Recovered (R) and Deaths (D) NODES for four different connectivity scenarios: isolated, fully connected, connectivity dynamics (i.e., lockdowns) and empirical mobility estimations. 
+Covid-19 pandemic as a model system to explore eco-evolutionary feedbacks. This is to say how ecological dynamics driven by connectivity dynamics (i.e. lockdowns) interact with new variants. The specific goal is to modeling mobility dynamics and age-dependent mortality rate at local regional and global scales (NODE: city, and country). Inference includes Susceptible (S), Infected (I), Recovered (R) and Deaths (D) counts for four different connectivity scenarios: isolated, fully connected, connectivity dynamics (i.e., lockdowns) and empirical mobility estimations.
 
 ## QUESTION
 
@@ -12,9 +12,8 @@ How do virulence-dispersion trade-offs along a gradient of connectivity dynamics
 
 ## MODELING STRATEGY
 
-eSIRevo: Eco-evo dynamics (trade-offs virulence-dispersion rate plus connectivity rate).
-
-Parameters --> mutation and virulence rates and gradient along dispersal rate --> virulence by matching
+* eSIRevo: Eco-evo dynamics (trade-offs virulence-dispersion rate plus connectivity rate).
+* Parameters: mutation and virulence rates and gradient along dispersal rate --> virulence by matching
 
 ## MODELING STRUCTURE
 
@@ -60,7 +59,7 @@ Hierarchical ABM :: Julia Agents.jl or EvoDynamics.jl :
 
 ## Generalization of the equations for an automated simulator builder 
 
-* Process-based knowledge graph to explore populations of models. For example, the SIR equations per NODE described above can be generalized to have Sn nodes for susceptibles (i.e., age classes), In nodes for infected, and Rn nodes for recoverd. In addition, there might be other node types, like explosed, unreported and reported infectious and hospitalized.
+* Process-based knowledge graph to explore populations of models. For example, the SIR equations per NODE described above can be generalized to have Sn nodes for the susceptible (i.e., age classes), In nodes for the infected, and Rn nodes for the recovered. In addition, there might be other node types, like exposed, unreported and reported infectious and hospitalized.
 
 
 ## Preliminary discussions (RUN SIMUS)
