@@ -2,7 +2,7 @@ export create_model, agent_step!
 
 mutable struct Pop <: AbstractAgent
   id::Int
-  pos::Int  # same as countryID
+  pos::NTuple{2,Int}  # first element same as countryID
   age_group::Int
   S::Float64  # Susceptible
   latent::Float64
@@ -76,7 +76,7 @@ function migrate!(pop, model)
   nodeN = population_size(pop)
   if nodeN > 0
     relS, relLatent, relIncubation, relR, relI = pop.S/nodeN, pop.latent/nodeN, pop.incubation/nodeN, pop.R/nodeN, pop.I/nodeN
-    n_out = rand.(model.properties[:m][pop.pos, :])
+    n_out = rand.(model.properties[:m][pop.pos[1], :])
     MFractionS, MFractionLatent, MFractionIncubation, MFractionI, MFractionR = (n_out*relS, n_out*relLatent, n_out*relIncubation, n_out*relI, n_out*relR)
     ## No migrations more than population size at source
     # save summations
@@ -99,11 +99,11 @@ function migrate!(pop, model)
     pop.I -= sumMFractionI
     for nodeid2 in 1:nagents(model)
       node2 = model.agents[nodeid2]
-      node2.S += MFractionS[node2.pos]
-      node2.latent += MFractionLatent[node2.pos]
-      node2.incubation += MFractionIncubation[node2.pos]
-      node2.R += MFractionR[node2.pos]
-      node2.I += MFractionI[node2.pos]        
+      node2.S += MFractionS[node2.pos[1]]
+      node2.latent += MFractionLatent[node2.pos[1]]
+      node2.incubation += MFractionIncubation[node2.pos[1]]
+      node2.R += MFractionR[node2.pos[1]]
+      node2.I += MFractionI[node2.pos[1]]        
     end
   end
 end
@@ -114,10 +114,10 @@ function agent_step!(pop, model)
 end
 
 function create_model(;parameters)
-  space = Space((parameters[:C], 1))
+  space = GridSpace((parameters[:C], 1))
   model = ABM(Pop, space, properties=parameters)
   for c in 1:parameters[:C]
-    pop = Pop(c, c, 1, parameters[:Ss][c], parameters[:latents][c], parameters[:incubations][c], parameters[:Is][c], parameters[:Rs][c], 0.0, parameters[:bs][c], parameters[:ss][c], parameters[:as][c], parameters[:es][c], parameters[:is][c], parameters[:dss][c], parameters[:dlats][c], parameters[:dincs][c], parameters[:dis][c], parameters[:drs][c])
+    pop = Pop(c, (c, 1), 1, parameters[:Ss][c], parameters[:latents][c], parameters[:incubations][c], parameters[:Is][c], parameters[:Rs][c], 0.0, parameters[:bs][c], parameters[:ss][c], parameters[:as][c], parameters[:es][c], parameters[:is][c], parameters[:dss][c], parameters[:dlats][c], parameters[:dincs][c], parameters[:dis][c], parameters[:drs][c])
     add_agent!(pop, c, model)
   end
   return model

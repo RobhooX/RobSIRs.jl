@@ -2,7 +2,7 @@ using RobSIRs
 using Agents
 using VegaLite
 
-datadir = "../data"
+datadir = "data/"
 
 # Running a single simulation.
 parameters = RobSIRs.load_params(
@@ -19,7 +19,7 @@ parameters = RobSIRs.load_params(
   datadir=datadir);
 
 model = create_model(parameters=parameters);
-data = step!(model, agent_step!, 50, [:pos, :I, :R, :D]);
+adata, _ = run!(model, agent_step!, 50, adata=[:pos, :I, :R, :D]);
 
 p = data |> @vlplot() +
 [@vlplot(mark = :line,
