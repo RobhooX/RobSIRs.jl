@@ -4,15 +4,17 @@ A stochastic discrete spatiotemporal model of eco-evolutionary feedbacks in cont
 
 ## VISION
 
-Modeling mobility dynamics and age-dependent mortality rate at local regional and global scales (NODE: individual, city, and country). Inference includes Susceptibles (S), Infected (I), Recovered (R) and Deaths (D) types per NODE for four different connectivity scenarios: isolated, fully connected, connectivity dynamics and empirical mobility estimations. 
+Covid-19 pandemic as a model system to explore eco-evolutionary feedbacks. This is to say how ecological dynamics driven by connectivity dynamics (i.e. lockdowns) interact with new variants. The specific goal is to modeling mobility dynamics and age-dependent mortality rate at local regional and global scales (NODE: individual, city, and country). Inference includes Susceptibles (S), Infected (I), Recovered (R) and Deaths (D) NODES for four different connectivity scenarios: isolated, fully connected, connectivity dynamics (i.e., lockdowns) and empirical mobility estimations. 
 
 ## QUESTION
 
-How do virulence-dispersion trade-offs along a gradient of connectivity dynamics change the number of infection waves and mortality rates?
+How do virulence-dispersion trade-offs along a gradient of connectivity dynamics change the number and patterns of infection waves and mortality rates?
 
 ## MODELING STRATEGY
 
-eSIRevo: Eco-evo dynamics (trade-offs virulence-dispersion rate plus connectivity rate): 4 parameters Random number --> mutation and virulence rates gradient along dispersal rate --> Proxy as recovery rate --> virulence by matching
+eSIRevo: Eco-evo dynamics (trade-offs virulence-dispersion rate plus connectivity rate).
+
+Parameters --> mutation and virulence rates and gradient along dispersal rate --> virulence by matching
 
 ## MODELING STRUCTURE
 
