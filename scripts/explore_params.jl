@@ -3,8 +3,8 @@ using Agents
 using CSV
 using JLD2
 using FileIO
-resultdir = "D:\\projects\\Robhoot\\Robhack\\MAR2020\\BM\\RobSIRs.jl\\results"
-datadir = "D:\\projects\\Robhoot\\Robhack\\MAR2020\\DI\\data\\transformed_data"
+resultdir = "../results"
+datadir = "../data"
 
 nsims = 1000
 for sim in 1:nsims

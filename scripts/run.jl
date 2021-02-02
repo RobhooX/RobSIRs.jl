@@ -2,7 +2,7 @@ using RobSIRs
 using Agents
 using VegaLite
 
-datadir = "D:\\projects\\Robhoot\\Robhack\\MAR2020\\DI\\data\\transformed_data"
+datadir = "../data"
 
 # Running a single simulation.
 parameters = RobSIRs.load_params(
