@@ -22,7 +22,7 @@ for sim in 1:nsims
   datadir=datadir);
 
   model = create_model(parameters=parameters);
-  data = step!(model, agent_step!, 100, [:pos, :I, :R, :D]);
+  adata, _ = run!(model, agent_step!, 100, adata=[:pos, :I, :R, :D]);
   # save the result
   simfile = joinpath(resultdir, "sim_$sim.csv")
   CSV.write(simfile, data)
