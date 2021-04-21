@@ -6,6 +6,13 @@ A stochastic discrete spatiotemporal model of eco-evolutionary feedbacks in cont
 
 Covid-19 pandemic as a model system to explore eco-evolutionary feedbacks. This is to say how ecological dynamics driven by connectivity dynamics (i.e. lockdowns) interact with new variants. The specific goal is to modeling mobility dynamics and age-dependent mortality rate at local regional and global scales (NODE: city, and country). Inference includes Susceptible (S), Infected (I), Recovered (R) and Deaths (D) counts for four different connectivity scenarios: isolated, fully connected, connectivity dynamics (i.e., lockdowns) and empirical mobility estimations.
 
+## COMPLEMENTARY INFORMATION
+ https://github.com/SwissTPH/OpenCOVID
+ 
+ https://github.com/CoronaWhy
+ 
+ https://www.coronawhy.org/
+
 ## QUESTION
 
 How do virulence-dispersion trade-offs along a gradient of connectivity dynamics change the number and patterns of infection waves and mortality rates?
